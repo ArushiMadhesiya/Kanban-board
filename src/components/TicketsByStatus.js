@@ -1,7 +1,5 @@
 import React from 'react';
-import Card from './Card'; // Adjust the import path as needed
-
-//import yourIcon from '../icons_FEtask/._add.svg'; // Adjust this path
+import Card from './Card'; 
 
 const TicketsByStatus = ({ tickets, users }) => {
     const statuses = ["backlog","todo", "in progress", "done", "canceled"];

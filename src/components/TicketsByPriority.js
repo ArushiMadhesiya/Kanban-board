@@ -1,8 +1,7 @@
 import React from 'react';
-import Card from './Card'; // Adjust the import path as needed
-
+import Card from './Card'; 
 const TicketsByPriority = ({ tickets, users }) => {
-    // Define priority levels with names
+    
     const priorityMapping = {
         4: 'Urgent',
         3: 'High',
@@ -10,10 +9,7 @@ const TicketsByPriority = ({ tickets, users }) => {
         1: 'Low',
         0: 'No priority'
     };
-    
-    // Define the priority levels in descending order
     const priorities = [4, 3, 2, 1, 0]; 
-    
     return (
         <div className="columns" style={{ display: 'flex', gap: '20px' }}>
             {priorities.map((priority) => {

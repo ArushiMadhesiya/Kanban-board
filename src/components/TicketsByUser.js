@@ -1,12 +1,10 @@
-// TicketsByUser.js
 import React from 'react';
-import Card from './Card'; // Import your Card component
+import Card from './Card'; 
 
 const TicketsByUser = ({ tickets, users }) => {
     return (
         <div className="columns" style={{ display: 'flex', gap: '20px' }}>
             {users.map(user => {
-                // Filter tickets by user ID
                 const userTickets = tickets.filter(ticket => ticket.userId === user.id);
 
                 return (

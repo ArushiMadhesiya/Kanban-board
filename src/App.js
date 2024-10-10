@@ -12,15 +12,14 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch data from the API when the component mounts
   useEffect(() => {
     const fetchTicketsAndUsers = async () => {
       try {
         setLoading(true);
         const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
         const data = await response.json();
-        setTickets(data.tickets); // Assuming the API response has `tickets` field
-        setUsers(data.users);     // Assuming the API response has `users` field
+        setTickets(data.tickets);
+        setUsers(data.users);  
       } catch (err) {
         setError('Failed to fetch data');
       } finally {
@@ -29,7 +28,7 @@ function App() {
     };
 
     fetchTicketsAndUsers();
-  }, []); // Empty dependency array means this useEffect runs once when the component mounts.
+  }, []); 
 
   if (loading) {
     return <div>Loading...</div>;
